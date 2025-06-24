@@ -29,3 +29,15 @@ Um mini-jogo de terminal inspirado em *Pandemic*, focado em ações táticas con
 ```bash
 git clone https://github.com/seuusuario/micropandemic.git
 cd micropandemic
+```
+
+2. Caso esteja no Windows, instale windows-curses:
+```bash
+pip install windows-curses
+```
+
+
+3. Execute main.py:
+```bash
+python main.py
+```
