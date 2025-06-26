@@ -2,8 +2,11 @@ from terminal_view.header import header
 from terminal_view.menu import menu
 from terminal_view.painel import painel
 
+turno = 0
+
 while True:
-    header()
+    turno += 1
+    header(turno)
     painel()
     menu()
 
