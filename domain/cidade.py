@@ -3,9 +3,8 @@ from domain.carta.construircentropesquisa import Construircentropesquisa
 from domain.carta.eventodoenca import Eventodoenca
 from domain.carta.bloquearinfeccao import Bloquearinfeccao
 from domain.carta.carta import Carta
-from domain.doenca import Doenca
 
-class Cidade(Doenca):
+class Cidade:
     def __init__(self, nome: str):
         self.nome = nome
         self.vizinhacidade: List["Cidade"] = []
@@ -22,6 +21,6 @@ class Cidade(Doenca):
     def adicionardoenca(self, eventodoenca: "Eventodoenca") -> None:
         self.eventodoenca.append(eventodoenca)
 
-    def statusdoenca(self, carta: "Carta") -> None:
-        print(f"Status da doença avaliado com a carta: {carta}")
+    def acaoCartaCidade(self, carta: "Carta") -> None:
+        pass
         
