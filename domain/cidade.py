@@ -1,6 +1,6 @@
 from typing import List
 from domain.carta.construircentropesquisa import Construircentropesquisa
-from domain.carta.eventodoenca import Eventodoenca
+from domain.carta.eventodoenca import EventoDoenca
 from domain.carta.bloquearinfeccao import Bloquearinfeccao
 from domain.carta.carta import Carta
 
@@ -9,7 +9,7 @@ class Cidade:
         self.nome = nome
         self.vizinhacidade: List["Cidade"] = []
         self.centropesquisa: "Construircentropesquisa" = None
-        self.eventodoenca: List["Eventodoenca"] = []
+        self.eventodoenca: List["EventoDoenca"] = []
         self.bloquearinfeccao: "Bloquearinfeccao" = None
 
     def adicionarCidadeVizinha(self, vizinhacidade: List["Cidade"]) -> None:
@@ -18,7 +18,7 @@ class Cidade:
     def centropesquisa_existe(self) -> bool:
         return self.centropesquisa is not None
 
-    def adicionardoenca(self, eventodoenca: "Eventodoenca") -> None:
+    def adicionardoenca(self, eventodoenca: "EventoDoenca") -> None:
         self.eventodoenca.append(eventodoenca)
 
     def acaoCartaCidade(self, carta: "Carta") -> None:
