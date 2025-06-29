@@ -8,7 +8,7 @@ class MoverJogador(Carta):
         super().__init__(cidade, jogador)
 
     def efeito(self) -> None:
-        print(f"AÇÃO: {self._jogador} se move para cidade {self._cidade}.")
+        self._jogador.moverJogador(self._cidade)
 
     def __str__(self) -> str:
         return f"Carta de Mover Jogador"

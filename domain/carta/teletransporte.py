@@ -7,7 +7,7 @@ class Teletransporte(Carta):
         super().__init__(cidade, jogador)
 
     def efeito(self) -> None:
-        print(f"AÇÃO: {self._jogador} teletransporta para a cidade {self._cidade}.")
+        self._jogador.teletransportar(self._cidade)
 
     def __str__(self) -> str:
         return f"Carta de Teletransporte"
